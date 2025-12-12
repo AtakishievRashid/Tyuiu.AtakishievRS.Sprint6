@@ -11,21 +11,18 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task2.V28.Lib
             for (int i = 0; i < count; i++)
             {
                 double x = startValue + i;
-                double den = 3 * x - 1; 
+                double den = 3 * x - 1;
 
-                if (Math.Abs(den) <= 0) 
+                if (Math.Abs(den) < 0.000001)
                 {
-                    results[i] = 0; 
+                    results[i] = 0;
                 }
                 else
                 {
-                    
-                    double a = (Math.Sin(x) - 2 * x) / den;
-                    double b = Math.Sin(x) - 3 * x + 2;
-
-                    results[i] = a + b;
-
-                    results[i] = Math.Round(results[i], 2);
+                    double sinX = Math.Sin(x);
+                    double a = (sinX - 2 * x) / den;
+                    double b = sinX - 3 * x + 2;
+                    results[i] = Math.Round(a + b, 2);
                 }
             }
 
