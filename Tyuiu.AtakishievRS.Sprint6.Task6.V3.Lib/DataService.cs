@@ -6,13 +6,14 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task6.V3.Lib
         public string CollectTextFromFile(string path)
         {
             string result = "";
-            string searchChar = "r";
+            string searchChar = "r"; // только строчная 'r'
 
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
+                    // Ищем только строчную 'r'
                     if (line.Contains(searchChar))
                     {
                         result += line + Environment.NewLine;
@@ -20,7 +21,7 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task6.V3.Lib
                 }
             }
 
-            return result.Trim(); 
+            return result.Trim();
         }
     }
 }
