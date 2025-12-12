@@ -30,6 +30,7 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task4.V3
                     textBoxResult_ARS.AppendText($"x = {x}: {valueArray[i]}{Environment.NewLine}");
                 }
 
+
             }
             catch
             {

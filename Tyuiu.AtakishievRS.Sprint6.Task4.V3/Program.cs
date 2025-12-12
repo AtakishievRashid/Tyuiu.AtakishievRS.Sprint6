@@ -12,6 +12,8 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task4.V3
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormMain());
+
+
         }
     }
 }

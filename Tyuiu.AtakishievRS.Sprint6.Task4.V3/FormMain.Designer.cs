@@ -108,7 +108,7 @@
             // 
             buttonSave_ARS.BackColor = Color.SteelBlue;
             buttonSave_ARS.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            buttonSave_ARS.Location = new Point(386, 22);
+            buttonSave_ARS.Location = new Point(398, 22);
             buttonSave_ARS.Name = "buttonSave_ARS";
             buttonSave_ARS.Size = new Size(86, 66);
             buttonSave_ARS.TabIndex = 5;

@@ -14,5 +14,6 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task4.V3.Test
             double[] wait = { 4.34, 4.16, 3.71, 3.27, 2.93, 2.50, 0.71, -47.61, 55.15, 45.17, 14.97 };
             CollectionAssert.AreEqual(wait, res);
         }
+
     }
 }
