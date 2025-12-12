@@ -5,23 +5,25 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task1.V22.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            int сount = stopValue - startValue + 1;
-            double[] results = new double[сount];
+            int count = stopValue - startValue + 1;
+            double[] results = new double[count];
 
-            for (int i = 0; i < сount; i++)
+            for (int i = 0; i < count; i++)
             {
                 double x = startValue + i;
-                double num = x;
-                double den = 3 * x + 2 * Math.Cos(x) + 1;
+                double mainPart = 3 * x + 2;
+                double denominator = Math.Cos(x) + 1;
 
-                if (den == 0)
+                if (Math.Abs(denominator) <= 0) 
                 {
                     results[i] = 0;
                 }
                 else
                 {
-                    results[i] = num / den;
+                    results[i] = mainPart - (x / denominator);
                 }
+
+                results[i] = Math.Round(results[i], 2);
             }
 
             return results;
