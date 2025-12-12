@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.AtakishievRS.Sprint6.Task2.V28.Lib\Tyuiu.AtakishievRS.Sprint6.Task2.V28.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
