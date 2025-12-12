@@ -7,20 +7,12 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task4.V3.Test
         [TestMethod]
         public void TestMethod1()
         {
-            var ds = new DataService();
-            var result = ds.GetMassFunction(-5, 5);
-
-            double[] expected = {
-        -0.18, -0.22, -0.28, -0.37, -0.54,
-        1.50, 0.28, 0.15, 0.09, 0.06, 0.04
-    };
-
-            Assert.AreEqual(expected.Length, result.Length);
-
-            for (int i = 0; i < expected.Length; i++)
-            {
-                Assert.AreEqual(expected[i], result[i], 0.001);
-            }
+            DataService ds = new DataService();
+            int startValue = -5;
+            int stopValue = 5;
+            var res = ds.GetMassFunction(startValue, stopValue);
+            double[] wait = { 4.34, 4.16, 3.71, 3.27, 2.93, 2.50, 0.71, -47.61, 55.15, 45.17, 14.97 };
+            CollectionAssert.AreEqual(wait, res);
         }
     }
 }

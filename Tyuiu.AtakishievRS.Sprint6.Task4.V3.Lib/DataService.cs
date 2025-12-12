@@ -13,7 +13,7 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task4.V3.Lib
                 double x = startValue + i;
                 double den = Math.Sin(x) - 3 + x;
 
-                if (Math.Abs(den) < 0.000001)
+                if (den == 0)
                 {
                     results[i] = 0;
                 }
