@@ -11,16 +11,16 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task1.V22.Lib
             for (int i = 0; i < count; i++)
             {
                 double x = startValue + i;
-                double mainPart = 3 * x + 2;
-                double denominator = Math.Cos(x) + 1;
+                double f = 3 * x + 2;
+                double den = Math.Cos(x) + 1;
 
-                if (Math.Abs(denominator) <= 0) 
+                if (Math.Abs(den) <= 0) 
                 {
                     results[i] = 0;
                 }
                 else
                 {
-                    results[i] = mainPart - (x / denominator);
+                    results[i] = f - (x / den);
                 }
 
                 results[i] = Math.Round(results[i], 2);
