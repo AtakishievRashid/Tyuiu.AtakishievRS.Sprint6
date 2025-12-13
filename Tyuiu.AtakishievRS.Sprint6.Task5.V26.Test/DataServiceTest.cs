@@ -7,18 +7,22 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task5.V26.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\bogra\Desktop\ПРОГАВУЗТИУ\Файлы\InPutFileTask5V26.txt";
-
-            if (!File.Exists(path))
-            {
-                Assert.Fail($"Файл не найден: {path}");
-                return;
-            }
+            string tempFile = Path.GetTempFileName();
+            File.WriteAllLines(tempFile, new[] { "10", "25", "3", "15", "7", "20" });
 
             DataService ds = new DataService();
-            double[] result = ds.LoadFromDataFile(path);
+            double[] result = ds.LoadFromDataFile(tempFile);
 
-            Assert.IsNotNull(result);
+            double[] expected = { 10, 25, 15, 20 };
+
+            Assert.AreEqual(expected.Length, result.Length);
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.AreEqual(expected[i], result[i]);
+            }
+
+            File.Delete(tempFile);
         }
     }
 }

@@ -3,9 +3,9 @@ namespace Tyuiu.AtakishievRS.Sprint6.Task5.V26.Lib
 {
     public class DataService : ISprint6Task5V26
     {
+        public int len = 0;
         public double[] LoadFromDataFile(string path)
         {
-            int len = 0;
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
